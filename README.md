@@ -1,6 +1,5 @@
 ## Abstract
 
-### **Justification**
 
 In today's fast-paced world, where air travel has become a common choice, predicting flight fares accurately is essential. The cost of flying is influenced by various factors, making it challenging for travelers. Our project aims to address this issue by leveraging machine learning algorithms to provide a reliable flight fare prediction system.
 
