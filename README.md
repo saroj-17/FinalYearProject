@@ -2,9 +2,9 @@
   <h1>Flight Fare Prediction System</h1>
 </div>
 <p align="center">
-  <img src="your-image-url-here" alt="Flight Icon" width="200" height="200">
+  <img src="https://www.aionlinecourse.com/blog/airline-tickets-price-prediction" alt="Flight Icon" width="200" height="200">
 </p>
-Abstract
+<h2>Abstract</h2>
 In today's fast-paced world, where the skies are your playground, embark on a journey of flight fare prediction like never before. 🛫
 
 Unlock the Secrets of the Skies! ✈️
