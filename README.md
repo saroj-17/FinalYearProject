@@ -4,6 +4,8 @@
 
 In today's fast-paced world, where air travel has become a common choice, predicting flight fares accurately is essential. The cost of flying is influenced by various factors, making it challenging for travelers. Our project aims to address this issue by leveraging machine learning algorithms to provide a reliable flight fare prediction system.
 
+![Nepal Airlines Airplane](https://en.digitalkhabar.com/wp-content/uploads/2021/07/Nepal-Airlines-NA-Aeroplane-Flight-1000x600.jpg)
+
 ### **What We Offer**
 
 #### **Simplified Flight Fare Predictions**
@@ -36,4 +38,4 @@ In today's fast-paced world, where air travel has become a common choice, predic
 
 Unlock the power of accurate flight fare predictions. Say goodbye to uncertainty and enjoy stress-free travel planning with our Flight Fare Prediction System.
 
-![Nepal Airlines Airplane](https://en.digitalkhabar.com/wp-content/uploads/2021/07/Nepal-Airlines-NA-Aeroplane-Flight-1000x600.jpg)
+
