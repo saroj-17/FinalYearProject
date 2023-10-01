@@ -2,10 +2,9 @@
   <h1>Flight Fare Prediction System</h1>
 </div>
 <p align="center">
-  <img src="![Blue Ready to Take Flight Quote Instagram Story](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/3ddb1524-4ebf-4422-b583-304066aa57b8)
-" alt="Flight Icon" width="200" height="200">
+  <img src="https://en.digitalkhabar.com/wp-content/uploads/2021/07/Nepal-Airlines-NA-Aeroplane-Flight-1000x600.jpg" alt="Nepal Airlines Airplane" width="300" height="200">
 </p>
-<h2>Abstract</h2>
+Abstract
 In today's fast-paced world, where the skies are your playground, embark on a journey of flight fare prediction like never before. 🛫
 
 Unlock the Secrets of the Skies! ✈️
@@ -34,3 +33,4 @@ What We Offer
 Your Next Adventure Awaits! 🌏
 
 Keywords: Random Forest Algorithm, Decision Tree Algorithm, Flight Fare Prediction, Flask, Domestic Nepali Airlines, Domestic Indian Airlines
+
