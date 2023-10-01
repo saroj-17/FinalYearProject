@@ -1,36 +1,39 @@
-<div align="center">
-  <h1>Flight Fare Prediction System</h1>
-</div>
-<p align="center">
-  <img src="https://en.digitalkhabar.com/wp-content/uploads/2021/07/Nepal-Airlines-NA-Aeroplane-Flight-1000x600.jpg" alt="Nepal Airlines Airplane" width="300" height="200">
-</p>
-<h2>Abstract</h2>
-In today's fast-paced world, where the skies are your playground, embark on a journey of flight fare prediction like never before. 🛫
+## Abstract
 
-Unlock the Secrets of the Skies! ✈️
+### **Justification**
 
+In today's fast-paced world, where air travel has become a common choice, predicting flight fares accurately is essential. The cost of flying is influenced by various factors, making it challenging for travelers. Our project aims to address this issue by leveraging machine learning algorithms to provide a reliable flight fare prediction system.
 
-Authors
-Saroj Bhandari
-Sudip Raj Shrestha
-Sanjeev Neupane
+### **What We Offer**
 
-<h3>What We Offer</h3>
-🧠 Machine Learning Magic: Witness the power of machine learning with our state-of-the-art Random Forest Algorithm (RF) and Decision Tree Algorithm (DT) implementations, all crafted from scratch.
-<br>
-🌍 Explore Indian & Nepali Airspace: Dive into a treasure trove of data, featuring over 10,000 records from diverse domestic Indian airlines and meticulously curated information from Domestic Nepali airlines.
-<br>
-📊 Model Showdown: Join us in an epic battle of accuracy and efficiency as we compare our models, ensuring you get the best results in the least time.
-<br>
-📅 Plan Your Journey: Tell us your travel plans, including departure and arrival dates, source, destination, stopovers, and airline name. We'll reveal the perfect flight fare for your adventure.
-<br>
-🖥️ User-Friendly Interface: Our sleek and intuitive web interface is designed using HTML, CSS, JS, and Bootstrap, making it a breeze to navigate.
-<br>
-👤 User Accounts: Register and log in for a personalized experience, allowing you to predict flight fares with ease.
-<br>
-🗄️ Data Storage: We rely on MYSQL, a powerful relational database management system, to ensure your data is securely stored.
-<br>
-Your Next Adventure Awaits! 🌏
+#### **Simplified Flight Fare Predictions**
 
-Keywords: Random Forest Algorithm, Decision Tree Algorithm, Flight Fare Prediction, Flask, Domestic Nepali Airlines, Domestic Indian Airlines
+- 🧠 **Machine Learning Magic**: We use advanced machine learning techniques, including the Random Forest Algorithm (RF) and Decision Tree Algorithm (DT), to predict flight fares accurately. These models are designed from the ground up to ensure precise predictions.
 
+- 🌍 **Comprehensive Data**: Our dataset includes over 10,000 records from diverse domestic Indian airlines and meticulously curated information from Domestic Nepali airlines. This wealth of data enables us to provide reliable predictions for various routes and airlines.
+
+- ⏱️ **Efficiency Matters**: We've conducted a model showdown, comparing RF and DT in terms of accuracy and computational efficiency. This ensures that you receive the best predictions in the shortest possible time.
+
+#### **Personalized Travel Planning**
+
+- ✈️ **Customized Journey Planning**: Share your travel plans with us, including departure and arrival dates, source, destination, stopovers, and airline name. We'll instantly reveal the perfect flight fare options tailored to your adventure.
+
+- 💻 **User-Friendly Interface**: Our web interface, designed using HTML, CSS, JS, and Bootstrap, makes navigation a breeze. No technical expertise required—just input your details, and we'll handle the rest.
+
+- 👤 **User Accounts**: Register and log in to enjoy a personalized experience. Gain access to your flight fare prediction history, making it easy to track and compare different options.
+
+#### **Secure Data Handling**
+
+- 🗄️ **Data Management**: We use MYSQL, a robust relational database management system, to store your data securely. Your information is kept confidential, ensuring a safe and reliable user experience.
+
+### **Authors**
+
+- Saroj Bhandari
+- Sudip Raj Shrestha
+- Sanjeev Neupane
+
+### **Your Next Adventure Awaits!**
+
+Unlock the power of accurate flight fare predictions. Say goodbye to uncertainty and enjoy stress-free travel planning with our Flight Fare Prediction System.
+
+![Nepal Airlines Airplane](https://en.digitalkhabar.com/wp-content/uploads/2021/07/Nepal-Airlines-NA-Aeroplane-Flight-1000x600.jpg)
