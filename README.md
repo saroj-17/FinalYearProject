@@ -13,7 +13,6 @@ In today's fast-paced world, where air travel has become a common choice, predic
 
 ![TicketGenerated](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/9078e7e5-b4c6-4130-8f8a-b6c23ee0c804)
 ![payWithStripe](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/9e3b3388-4e5c-421a-afea-2d5898f6ca32)
-![PaymentInformationDashBoard](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/69114fcd-001d-42a6-9cd7-5a5269a4dfb7)
 
 ### **What We Offer**
 
