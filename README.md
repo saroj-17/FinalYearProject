@@ -1,6 +1,7 @@
 ## Abstract
-https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/cd/52/08/nepal-airlines.jpg?w=1200&h=-1&s=1
+![download](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/88ac963f-95fb-4aa5-ad1a-88f10ce793c5)
 In today's fast-paced world, where air travel has become a common choice, predicting flight fares accurately is essential. The cost of flying is influenced by various factors, making it challenging for travelers. Our project aims to address this issue by leveraging machine learning algorithms to provide a reliable flight fare prediction system.
+
 
 
 ### **What We Offer**
@@ -16,7 +17,6 @@ In today's fast-paced world, where air travel has become a common choice, predic
 #### **Personalized Travel Planning**
 
 - ✈️ **Customized Journey Planning**: Share your travel plans with us, including departure and arrival dates, source, destination, stopovers, and airline name. We'll instantly reveal the perfect flight fare options tailored to your adventure.
-![PaymentInformationDashBoard](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/1111b1e9-b6c8-44c3-957e-5e9eec4c19d2)
 
 - 💻 **User-Friendly Interface**: Our web interface, designed using HTML, CSS, JS, and Bootstrap, makes navigation a breeze. No technical expertise required—just input your details, and we'll handle the rest.
 
@@ -44,5 +44,6 @@ Unlock the power of accurate flight fare predictions. Say goodbye to uncertainty
 ![InvalidUserCheck](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/debcbc91-bef7-4dbf-8ece-3e5d13b5f490)
 ![TicketGenerated](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/9078e7e5-b4c6-4130-8f8a-b6c23ee0c804)
 ![payWithStripe](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/9e3b3388-4e5c-421a-afea-2d5898f6ca32)
+![PaymentInformationDashBoard](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/1111b1e9-b6c8-44c3-957e-5e9eec4c19d2)
 
 
