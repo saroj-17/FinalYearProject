@@ -1,18 +1,7 @@
 ## Abstract
-
-![payWithStripe](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/31d90cb2-2021-427e-a5b0-974a1b81d547)
-
+https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/cd/52/08/nepal-airlines.jpg?w=1200&h=-1&s=1
 In today's fast-paced world, where air travel has become a common choice, predicting flight fares accurately is essential. The cost of flying is influenced by various factors, making it challenging for travelers. Our project aims to address this issue by leveraging machine learning algorithms to provide a reliable flight fare prediction system.
 
-![Home](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/13544cd9-8c61-4971-a929-6352a8b7d007)
-![Register](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/5fc3eef9-4c89-4d2c-9923-2ef2b247a05d)
-![HomePageLogedIn](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/0acfc9b4-99f7-4ae2-ae35-8a9ad187b212)
-![InvalidUserCheck](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/debcbc91-bef7-4dbf-8ece-3e5d13b5f490)
-![UserInput_IndianDataset](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/e4f1866d-fb6f-4aa6-a692-dba4e8e73394)
-![PredictedValue](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/f38532cf-b250-4bcd-8c88-1e7217555f2d)
-
-![TicketGenerated](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/9078e7e5-b4c6-4130-8f8a-b6c23ee0c804)
-![payWithStripe](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/9e3b3388-4e5c-421a-afea-2d5898f6ca32)
 
 ### **What We Offer**
 
@@ -46,5 +35,14 @@ In today's fast-paced world, where air travel has become a common choice, predic
 ### **Your Next Adventure Awaits!**
 
 Unlock the power of accurate flight fare predictions. Say goodbye to uncertainty and enjoy stress-free travel planning with our Flight Fare Prediction System.
+
+
+### Screen Shots 
+![Home](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/13544cd9-8c61-4971-a929-6352a8b7d007)
+![Register](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/5fc3eef9-4c89-4d2c-9923-2ef2b247a05d)
+![HomePageLogedIn](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/0acfc9b4-99f7-4ae2-ae35-8a9ad187b212)
+![InvalidUserCheck](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/debcbc91-bef7-4dbf-8ece-3e5d13b5f490)
+![TicketGenerated](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/9078e7e5-b4c6-4130-8f8a-b6c23ee0c804)
+![payWithStripe](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/9e3b3388-4e5c-421a-afea-2d5898f6ca32)
 
 
