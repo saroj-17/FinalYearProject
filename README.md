@@ -12,7 +12,7 @@ In today's fast-paced world, where air travel has become a common choice, predic
 
 - 🧠 **Machine Learning Magic**: We use advanced machine learning techniques, including the Random Forest Algorithm (RF) and Decision Tree Algorithm (DT), to predict flight fares accurately. These models are designed from the ground up to ensure precise predictions.
 
-- 🌍 **Comprehensive Data**: Our dataset includes over 10,000 records from diverse domestic Indian airlines and meticulously curated information from Domestic Nepali airlines. This wealth of data enables us to provide reliable predictions for various routes and airlines.
+- 🌍 **Comprehensive Data**: Our dataset includes over 10,000 records from diverse domestic Indian airlines and meticulously curated information from Domestic Nepali airlines. This wealth of data enables us to provide reliable predictions for various routes and airlines.Indian dataset is taken from [Kaggle Indian Air data](https://www.kaggle.com/datasets/nikhilmittal/flight-fare-prediction-mh) 
 
 - ⏱️ **Efficiency Matters**: We've conducted a model showdown, comparing RF and DT in terms of accuracy and computational efficiency. This ensures that you receive the best predictions in the shortest possible time.
 
