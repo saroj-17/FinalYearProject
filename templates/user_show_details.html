@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0c0c0c;
+            margin-bottom: 30px;
+        }
+
+        .mt-3 {
+            text-align: center;
+        }
+
+        .div1{
+            margin-left: 235px;
+        }
+
+        /* CSS for table styling */
+        .table-container {
+            margin: 20px auto;
+            width: 80%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+        p{
+            margin: 10px;
+        }
+
+        table th,
+        table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        /* CSS for responsive table */
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            table thead,
+            table tbody,
+            table th,
+            table td,
+            table tr {
+                display: block;
+            }
+
+            table tr {
+                border-bottom: none;
+            }
+
+            table td {
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+            }
+
+            table th {
+                border: none;
+            }
+
+            table tbody {
+                overflow-y: auto;
+                max-height: 300px;
+            }
+        }
+
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <br><br><br><br>
+    <h1>User History Logs</h1>
+
+    <div class="div1">
+        <div style="display: flex;">
+            <div>
+                <p><strong>User Name:</strong> {{ username }}</p>
+            </div>
+            <div>
+                <p><strong>Email:</strong> {{ email }}</p>
+            </div>
+            <div>
+                <p><strong>Contact:</strong> {{ contact }}</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="table-container">
+        <h4>User Log History Overview:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Arrival Time</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Stops</th>
+                    <th>Airline</th>
+                    <th>Date and Time</th>
+                    <th>Country</th>
+                    <th>Price in $</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user_show_detail in user_show_details %}
+                <tr>
+                    <td>{{ user_show_detail.arrival_time }}</td>
+                    <td>{{ user_show_detail.source }}</td>
+                    <td>{{ user_show_detail.destination }}</td>
+                    <td>{{ user_show_detail.stop }}</td>
+                    <td>{{ user_show_detail.airline }}</td>
+                    <td>{{ user_show_detail.current_datetime }}</td>
+                    <td>{{ user_show_detail.country }}</td>
+                    <td>{{ user_show_detail.price }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+
+</html>

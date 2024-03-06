@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe Payment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            /* Light gray background color */
+            color: #333;
+            /* Dark text color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            /* White background color for the form */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        article {
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 40px;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 45px;
+            color: #37a2d0;
+            
+        }
+
+        .description {
+            font-size: 40px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .instruction {
+            font-size: 30px;
+            /* Adjusted font size */
+            color: #999;
+            margin-top: 30px;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+        }
+        .stripe-button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 40px;
+        }
+
+        .stripe-button:hover {
+            background-color: #218838;
+        }
+
+        .warning {
+            font-size: 28px;
+            font-style: italic;
+            color: #ff0000; /* Red color */
+            text-align: center;
+            margin-top: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+
+    <form action="/charge" method="post">
+        <img src="/static/image/stripe.png" alt="Stripe Logo" class="logo">
+        <article>
+            <label>
+                Payment Amount:
+                <span>{{ predicted_price/100 }}</span> USD
+            </label>
+        </article>
+        <p class="description">With this payment, please confirm your payment for the specified flight time.</p>
+        <p class="instruction">Click the button below to proceed with the payment.</p>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ key }}"
+            data-description="Flight Ticket Payment" data-amount="{{ predicted_price }}" data-locale="auto"></script>
+        <p class="warning">Once the payment is done, it is not refundable.</p>
+    </form>
+
+    {% include 'footer.html' %}
+
+</body>
+
+</html>
