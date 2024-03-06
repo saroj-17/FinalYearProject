@@ -2,7 +2,7 @@
 ![Untitled-1](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/8cfcc0d8-abb0-4504-a3cb-9028365a0371)
 
 
-In today's fast-paced world, where air travel has become a common choice, predicting flight fares accurately is essential. The cost of flying is influenced by various factors, making it challenging for travelers. Our project aims to address this issue by leveraging machine learning algorithms to provide a reliable flight fare prediction system.
+In today's fast-paced world, where air travel has become a common choice, predicting flight fares accurately is essential. The cost of flying is influenced by various factors, making it challenging for travelers. Our project aims to address this issue by implementing machine learning algorithms to provide a reliable flight fare prediction system.
 
 
 
@@ -16,7 +16,7 @@ In today's fast-paced world, where air travel has become a common choice, predic
 
 - ⏱️ **Efficiency Matters**: We've conducted a model showdown, comparing RF and DT in terms of accuracy and computational efficiency. This ensures that you receive the best predictions in the shortest possible time.
 
-#### **Personalized Travel Planning**
+### Personalized Travel Planning
 
 - ✈️ **Customized Journey Planning**: Share your travel plans with us, including departure and arrival dates, source, destination, stopovers, and airline name. We'll instantly reveal the perfect flight fare options tailored to your adventure.
 
@@ -24,10 +24,18 @@ In today's fast-paced world, where air travel has become a common choice, predic
 
 - 👤 **User Accounts**: Register and log in to enjoy a personalized experience. Gain access to your flight fare prediction history, making it easy to track and compare different options.
 
-#### **Secure Data Handling**
+### User History Log
+
+- 📜 **View Your Log History**: Access your flight fare prediction history to track and compare different options.
+
+### Secure Data Handling
 
 - 🗄️ **Data Management**: We use MYSQL, a robust relational database management system, to store your data securely. Your information is kept confidential, ensuring a safe and reliable user experience.
 
+### Stripe Payment Processing and Dynamic Bill Generation
+
+- 💳 **Secure Payments**: We use Stripe for secure payment processing, ensuring your transactions are safe and protected.
+- 🧾 **Dynamic Bill Generation**: Receive detailed bills for your transactions, providing transparency and clarity.
 ### **Authors**
 
 - Saroj Bhandari
@@ -38,14 +46,19 @@ In today's fast-paced world, where air travel has become a common choice, predic
 
 Unlock the power of accurate flight fare predictions. Say goodbye to uncertainty and enjoy stress-free travel planning with our Flight Fare Prediction System.
 
+This system is for fulfillment of final year project at BSCCSIT 7th semister TU
+
 
 ### Screen Shots 
-![Home](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/13544cd9-8c61-4971-a929-6352a8b7d007)
-![Register](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/5fc3eef9-4c89-4d2c-9923-2ef2b247a05d)
-![HomePageLogedIn](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/0acfc9b4-99f7-4ae2-ae35-8a9ad187b212)
-![InvalidUserCheck](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/debcbc91-bef7-4dbf-8ece-3e5d13b5f490)
-![TicketGenerated](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/9078e7e5-b4c6-4130-8f8a-b6c23ee0c804)
-![payWithStripe](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/9e3b3388-4e5c-421a-afea-2d5898f6ca32)
-![PaymentInformationDashBoard](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/1111b1e9-b6c8-44c3-957e-5e9eec4c19d2)
+![register](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/20c40d4d-72c0-4758-b467-0884f6eca2f2)
+![login](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/7a0cb7bf-0fe7-427f-b371-0001b0fed624)
+![home](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/1c5a6d48-a9e3-46b6-99f7-89ff3697ee9b)
+![predict](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/a2a14aab-cad0-452d-8b50-911dc0ba918f)
+![dynamic_bill](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/58bf099f-d950-45ac-9a46-44f8abc9bf2f)
+![stripe_payment](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/1b7735d9-4bc1-4bc8-b1d4-0c4b46cb52f3)
+![test_payment](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/632ddcd6-7817-40bb-90b5-c8f75251e6ac)
+![payment_sucess](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/6255c18c-54c8-4049-8ba1-5e707af90243)
+![user_log_history](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/c8a6fb89-b117-4ded-8753-2348c74ba1d7)
+![payment_log](https://github.com/saroj-17/FlightFarePredectionSystem/assets/115420182/6263a0e0-9880-478d-9334-a2965264e578)
 
 
