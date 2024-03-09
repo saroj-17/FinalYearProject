@@ -10,6 +10,8 @@ from flask_bootstrap import Bootstrap
 from flask_cors import cross_origin
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
+from flask_login import UserMixin
+from sqlalchemy.orm import relationship
 from datetime import datetime
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length
@@ -115,8 +117,6 @@ def logout():
     logout_user()
     flash('Logged out successfully', 'success')
     return redirect(url_for('login'))
-from flask_login import UserMixin
-from sqlalchemy.orm import relationship
 
 
 
@@ -140,18 +140,22 @@ def register():
 @app.route('/checkout',methods=['POST'])
 @login_required
 def checkout():
+    if current_user.is_authenticated:
+        username = current_user.username
     publishable_key = os.environ.get("STRIPE_PUBLISHABLE_KEY")
    
     predicted_price = session.get("predicted_price")
  
     predicted_price_in_cent = int(predicted_price*100)
-    return render_template('checkout.html', key=publishable_key,predicted_price=predicted_price_in_cent)
+    return render_template('checkout.html', key=publishable_key,predicted_price=predicted_price_in_cent,username=username)
  
 from datetime import datetime
 from flask import render_template
 
 @app.route('/charge', methods=['POST'])
 def charge():
+    if current_user.is_authenticated:
+     username = current_user.username
     stripe.api_key = os.environ["STRIPE_SECRET_KEY"]
     predicted_price = session.get("predicted_price")
     predicted_price_float = float(predicted_price)
@@ -160,6 +164,11 @@ def charge():
     user_email = session.get("user_email")
     if not user_email:
         flash('User email not found. Please register again.', 'error')
+        return redirect(url_for('register'))
+    
+    user = User.query.filter_by(email=user_email).first()
+    if not user:
+        flash('User not found. Please register again.', 'error')
         return redirect(url_for('register'))
 
     customer = stripe.Customer.create(
@@ -195,7 +204,7 @@ def charge():
         flash('An error occurred while saving the record. Please try again.', 'error')
         return redirect(url_for('show'))
 
-    return render_template('charge.html', amount=amount)
+    return render_template('charge.html', amount=amount,username=username)
 
 @app.route('/user_show_detail', methods=['GET', 'POST'])
 @login_required
@@ -220,6 +229,8 @@ def get_current_datetime():
 @login_required
 @cross_origin()
 def predict():
+    if current_user.is_authenticated:
+     username = current_user.username
     if request.method == "POST":
          
         form = LoginForm()
@@ -1158,13 +1169,15 @@ def predict():
         }
     
     session["predicted_price"] = output
-    return render_template('home.html', prediction_text="Your Flight price is ${}".format(output))
+    return render_template('home.html', prediction_text="Your Flight price is ${}".format(output),username=username)
 
         
 
 @app.route('/show', methods=['POST', 'GET'])
 @login_required
 def show():
+    if current_user.is_authenticated:
+        username = current_user.username
     input_data = session.get("input_data", None)
 
     if input_data:
@@ -1173,10 +1186,10 @@ def show():
         contact = current_user.contact
         return render_template('show.html', dep_time=input_data["dep_time"], arrival_time=input_data["arrival_time"],
                                source=input_data["source"], destination=input_data["destination"],
-                               stops=input_data["stops"], airline=input_data["airline"], price=input_data["price"],show=username,email=email, contact=contact, current_datetime=input_data["current_datetime"],country = input_data["country"])
+                               stops=input_data["stops"], airline=input_data["airline"], price=input_data["price"],show=username,email=email, contact=contact, current_datetime=input_data["current_datetime"],country = input_data["country"],username=username)
     else:
         flash("Please provide data for prediction before showing details.", 'error')
-        return redirect(url_for('show'))
+        return redirect(url_for('show'),username=username)
     
 
 if __name__ == "__main__":
