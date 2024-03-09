@@ -3,8 +3,79 @@ import pandas as pd
 import numpy as np 
 import pandas as pd 
 from sklearn.metrics import r2_score
+import matplotlib.pyplot as plt 
+import seaborn as sns #seaborn is used for the staic data visualization 
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error,mean_absolute_error, r2_score
 from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+
+
+########################################################################################
+#
+#EXPLANTION OF THE CODE
+#The code is used to create a simple decision tree regressor and a simple random forest regressor from scratch.
+#The SimpleDecisionTreeRegressor class contains the following methods:
+
+# __init__(self):
+# Initializes the decision tree and feature importances attributes to None.
+
+# mean_squared_error(y):
+# Static method that calculates the mean squared error for a set of values y.
+# Example: If y = [3, 4, 5, 6, 7], the mean squared error would be calculated as follows:
+# Mean: (3 + 4 + 5 + 6 + 7) / 5 = 5
+# Mean Squared Error: ((3-5)^2 + (4-5)^2 + (5-5)^2 + (6-5)^2 + (7-5)^2) / 5 = 2
+
+# get_mse(self, y):
+# Calculates the mean squared error for a given set of y values using the mean_squared_error method.
+
+# best_split(self, X, y):
+# Finds the best feature and value to split the data based on minimizing
+# the weighted mean squared error.
+# Example: If the dataset has features like 'airlines', 'duration_hrs',  'destination', 
+# this method determines the best feature and value to split the dataset 
+# into subsets based on these features.
+
+# grow_tree(self, X, y, depth, min_samples_split):
+# Recursively grows the decision tree.
+# Stops growing when the depth is 0 or the number of samples is less than 
+# the minimum required for a split.
+# Example: It recursively splits the dataset into subsets based on the best 
+# feature and value until the stopping conditions are met.
+
+# fit(self, X, y, max_depth=None, min_samples_split=None):
+# Fits the decision tree to the training data.
+# Calls the grow_tree method to build the decision tree.
+# Calculates and stores feature importances.
+# Example: fit(X_train, y_train, max_depth=10, min_samples_split=10) 
+# trains the decision tree with a maximum depth of 10 and a minimum number 
+# of samples required to split a node of 10.
+
+# calculate_feature_importances(self, X, y):
+# Calculates feature importances based on mean squared error.
+# Example: It calculates the importance of each feature in predicting
+# the target variable by evaluating how much the mean squared error 
+# decreases when a feature is chosen for splitting.
+
+# predict_obs(self, x, tree):
+# Predicts the output for a single observation using the trained tree.
+# Example: Given an observation x, it traverses the decision tree and 
+# predicts the output based on the learned split conditions.
+
+# predict(self, X):
+# Predicts the outputs for a set of observations using the trained tree.
+# Example: predict(X_test) predicts the outputs for the test set X_test.
+
+# k_fold_cross_validation_DT(self, X, y, k=5):
+# Performs k-fold cross-validation to evaluate the decision tree regressor.
+# Splits the data into k folds, trains the model on k-1 folds, and evaluates 
+# on the remaining fold.
+# Example: k_fold_cross_validation_DT(X, y, k=10) evaluates the decision tree
+# regressor using 10-fold cross-validation on the dataset X with target variable y.
+
+
+
+
 
 
 # Definition of the SimpleDecisionTreeRegressor class
@@ -161,20 +232,6 @@ class SimpleDecisionTreeRegressor:
             # Return the value associated with the leaf node, converted to float
             return float(tree)
 
-#     def predict_obs(self, x, tree):
-#         # Check if the current node is an internal node
-#         if isinstance(tree, tuple):
-#             # Unpack the tuple representing the internal node
-#             feature, value, left_subtree, right_subtree = tree
-#             # Make a recursive call based on the split condition
-#             if x[feature] <= value:
-#                 return self.predict_obs(x, left_subtree)
-#             else:
-#                 return self.predict_obs(x, right_subtree)
-#         else:  # Leaf node
-#             # Return the value associated with the leaf node
-#             return tree
-
     # Method to predict the outputs for a set of observations using the trained tree
     def predict(self, X):
         # Check if the tree has been trained
@@ -222,6 +279,39 @@ class SimpleDecisionTreeRegressor:
         print(f'Average R-squared: {avg_r2:.4f}')
         print(f'Average MSE: {avg_mse:.4f}')
         print(f'Average MAE: {avg_mae:.4f}')
+#################################################################################
+
+# __init__(self, n_estimators=100, max_depth=None, min_samples_split=2): 
+# The constructor method initializes the random forest regressor object with the
+# number of estimators (n_estimators), maximum depth of the trees (max_depth), and
+# the minimum number of samples required to split an internal node (min_samples_split).
+
+# mean_squared_error(self, y): 
+# Calculates the mean squared error for a given set of target values y.
+
+# get_mse(self, y): 
+# Wrapper function for mean_squared_error, returning the mean squared error for a 
+# given set of target values y.
+
+# bootstrap_sample(self, X, y): Generates a bootstrap sample from the provided
+# dataset X and target values y. It randomly selects samples from X and y with replacement.
+
+# train_tree(self, X, y): Trains an individual decision tree using the bootstrap
+# sample generated by bootstrap_sample(). It returns the trained decision tree.
+
+# fit(self, X, y): Fits the random forest regressor to the training data X and target
+# values y. It trains n_estimators decision trees using bootstrapped samples and stores
+# them in the trees attribute.
+
+# predict(self, X): Makes predictions for the input dataset X. It computes predictions
+# for each decision tree in the forest and returns the average prediction across all trees.
+
+# k_fold_cross_validation(self, X, y, k=5): Performs k-fold cross-validation to evaluate
+# the performance of the random forest regressor. It splits the dataset into k folds,
+# trains the model on k-1 folds, and evaluates it on the remaining fold. It returns
+# the average R-squared, mean squared error, and mean absolute error scores across
+# all folds.
+
 
 class SimpleRandomForestRegressor:
     
@@ -293,3 +383,13 @@ class SimpleRandomForestRegressor:
             r2_scores.append(r2_score(y_test, predictions_rf))
             mse_scores.append(mean_squared_error(y_test, predictions_rf))
             mae_scores.append(mean_absolute_error(y_test, predictions_rf))
+        
+        avg_r2 = np.mean(r2_scores)
+        avg_mse = np.mean(mse_scores)
+        avg_mae = np.mean(mae_scores)
+
+        print(f'Average R-squared: {avg_r2:.4f}')
+        print(f'Average MSE: {avg_mse:.4f}')
+        print(f'Average MAE: {avg_mae:.4f}')
+
+
